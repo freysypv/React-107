@@ -1,19 +1,21 @@
+//app is the parent of the product, catalog is the parent of product.
 import QuantityPicker from "../QuantityPicker";
 import"./product.css";
 
-function Product(){
+function Product(props){
     return(
 
         <div className="Product"> 
-        <img src="https://picsum.photos/200" alt="Product Image" />
-           <h5>Products Title goes here</h5>
-           <div className="price">
-            <label>Price</label>
+         <img src={"/images/" + props.data.image} alt="Product Image" />
+           <h5>{props.data.title}</h5>
+         <div className="price"> 
             <label>Total</label>
+            { <label>{[props.data.price.toFixed(2)]}</label> /*to Fixed = round up the price to 2 decimal places. */}
+            
             {/* comment */}
             {/*  */}
         
-              </div>
+         </div>
               <QuantityPicker/>
         </div>
 

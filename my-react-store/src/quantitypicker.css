@@ -1,0 +1,24 @@
+.QuantityPicker {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .QuantityPicker button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    border: none;
+    background-color: #5ba5f5;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  .QuantityPicker label {
+    font-size: 16px;
+    min-width: 10px;
+    text-align: center;
+   
+  }
+  
