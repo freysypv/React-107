@@ -41,11 +41,12 @@ const Catalog = [
 
 ];
 
-class dataService{                 //this is a class that will contain the logic to get the products from the catalog.this a controter.
-    getProducts(){            //this is a method that will return the products from the catalog
-        return Catalog; 
-
-    }
+class dataService {
+  //this is a class that will contain the logic to get the products from the catalog.
+  getProducts() {
+    //this is a method that will return the products from the catalog
+    return Catalog;
+  }
 }
 
 export default dataService; //this is the default export of the DataService class.
