@@ -5,7 +5,7 @@ import "./product.css";
 function Product(props) {
   return (
     <div className="Product">
-      <img src='{${props.data.image}` alt="Image" />
+      <img src={"/public/" + props.data.image} alt="product "></img>
       <h5>{props.data.title}</h5>
       <div className="price">
         <label>Total</label>
@@ -16,7 +16,6 @@ function Product(props) {
         }
 
         {/* comment */}
-        {/*  */}
       </div>
       <QuantityPicker />
     </div>

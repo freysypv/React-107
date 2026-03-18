@@ -19,9 +19,9 @@ const Footer = () => {
             </div>
                 <div className="social-media">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    
+                    <br />
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-                    
+                    <br />
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
             <div className="copyright">

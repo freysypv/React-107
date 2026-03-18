@@ -1,0 +1,14 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordWrap": "on",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "workbench.editor.alwaysShowEditorActions": true,
+  "workbench.editor.autoLockGroups": {
+    "workbench.editor.processExplorer": false,
+    "terminalEditor": false,
+    "mainThreadWebview-browserPreview": false,
+    "mainThreadWebview-simpleBrowser.view": false
+  },
+  "workbench.editor.defaultBinaryEditor": "default"
+}
