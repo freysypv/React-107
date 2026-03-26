@@ -2,11 +2,12 @@ import Product from "../components/product";
 import "./Catalog.css";
 import DataService from "../services/dataService";
 import { useEffect, useState } from "react";
+import QuantityPicker from "../QuantityPicker";
 
 function Catalog() {
   const [products, setProducts] = useState([]); //this is a state that will hold the products from the catalog. is an array because we will have multiple products.
   const [categories, setCategories] = useState([]); //this is a state that will hold the categories from the catalogory data. is  an array because we will have multiple categories.
-  const [productsToDispay, setProductsToDisplay] = useState([]);
+  const [productsToDisplay, setProductsToDisplay] = useState([]);
 
   function loadCatalog() {
     let service = new DataService();
@@ -51,6 +52,7 @@ function Catalog() {
     <div className="catalog">
       <h1>Check our amazing products!</h1>
       <br />
+
       <div className="container">
         {categories.map((cat) => (
           <button key={cat} onClick={() => filter(cat)}>
@@ -63,9 +65,15 @@ function Catalog() {
         </button>
       </div>
 
-      {productsToDispay.map((prod) => (
-        <Product key={prod._id} data={prod} />
-      ))}
+      <div className="total_price">
+        {productsToDisplay.map((props) => (
+          <>
+            <Product key={props._id} data={props} />
+            <QuantityPicker price={props.price} />
+          </>
+        ))}
+      </div>
+      
     </div>
   );
 }
