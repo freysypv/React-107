@@ -6,7 +6,7 @@ import QuantityPicker from "../QuantityPicker";
 
 function Product(props) {
   return (
-    <div className="Product">
+    <div className="Product card text-center  mb-4">
       <img src={"/public/" + props.data.image} alt="product "></img>
       <h5>{props.data.title}</h5>
       <div className="price">
@@ -22,6 +22,6 @@ function Product(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Product;
