@@ -1,29 +1,35 @@
 import {BrowserRouter,Routes,Route} from'react-router-dom'
-import './App.css'
-import Navbar from './components/Navbar';
+import Admin from "./pages/admin";
 import About from './pages/about';
-import Home from './pages/Home';
-import Catalog from './pages/Catalog';
-import Contact from './pages/Contact';
-import Footer from './components/footer'; 
+import Catalog from "./pages/Catalog";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import NotFound from './pages/NotFound';
+  
+import Footer from "./components/footer";
+import Navbar from './components/Navbar';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-
-      <Routes>
-        <Route path='/about' element={<About />} />
-        <Route path='/catalog' element={<Catalog/>} />
-        <Route path='/' element={<Home/>} /> 
-        <Route path='/contact' element={<Contact/>} />      
-      </ Routes>
-
-      <Footer />
+      <div className="d-flex flex-column min-vh-100 bg-light">
+        <Navbar />
+        <main className="flex-grow-1">
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 };
