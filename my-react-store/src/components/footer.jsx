@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="footer bg-dark text-light text-center p-4 mt-5 bg-opacity-40 fs-4"> 
             <div>
                 <h4>Contact Us</h4>
-                <p>
+                <p >
                     Email: <a href="mailto:example@email.com">example@email.com</a>
                 </p>
                 <p>
