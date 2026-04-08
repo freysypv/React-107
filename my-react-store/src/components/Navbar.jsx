@@ -1,9 +1,12 @@
-//imports
+import { useContext } from 'react';
+import GlobalContext from '../state/globalContext.js';
 import { Link } from 'react-router-dom'
+import { IconUser } from "@tabler/icons-react";
 // import "./Navbar.css"
 
 //logic
 function Navbar() {
+  const user = useContext(GlobalContext).user;
     return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary bg-opacity-70 bg- text-white mb-5 fs-3">
         <div className="container-fluid">
@@ -20,11 +23,14 @@ function Navbar() {
             aria-label="Toggle navigation"
             hover="true"
             hover-bg="dark"
-            
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent onHover:bg-dark" aria-label="Toggle navigation">
+          <div
+            className="collapse navbar-collapse"
+            id="navbarSupportedContent onHover:bg-dark"
+            aria-label="Toggle navigation"
+          >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
                 <Link className="nav-link active" to={"/"}>
@@ -55,9 +61,12 @@ function Navbar() {
                 </Link>
               </li>
 
-              
+              <li className="nav-item fs-4 ">
+                <Link className="nav-link " to={"/Profile"}>
+                  <IconUser color="black" stroke={2} size={24}/> {user.firstName} {user.lastName} {/*//stroke is thickness */}
+                </Link>
+              </li>
             </ul>
-            
           </div>
         </div>
       </nav>
